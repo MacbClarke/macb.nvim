@@ -170,7 +170,7 @@ return {
         -- clangd = {},
         -- gopls = {},
         pyright = {},
-        -- rust_analyzer = {},
+        rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -178,18 +178,19 @@ return {
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
-        volar = {
-          filetypes = { 'vue', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
-          init_options = {
-            vue = {
-              hybridMode = false,
-            },
-            typescript = {
-              tsdk = vim.fn.getcwd() .. '/node_modules/typescript/lib',
-            },
-          },
-        },
-        --
+
+        -- When using vue, uncomment volar and comment out ts
+        -- volar = {
+        --   filetypes = { 'vue', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
+        --   init_options = {
+        --     vue = {
+        --       hybridMode = false,
+        --     },
+        --     typescript = {
+        --       tsdk = vim.fn.getcwd() .. '/node_modules/typescript/lib',
+        --     },
+        --   },
+        -- },
 
         lua_ls = {
           -- cmd = {...},

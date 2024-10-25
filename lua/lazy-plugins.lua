@@ -37,7 +37,9 @@ require('lazy').setup({
 
   -- require 'kickstart/plugins/tokyonight',
 
-  require 'kickstart/plugins/gruvbox',
+  -- require 'kickstart/plugins/gruvbox',
+
+  require 'kickstart/plugins/gruvbox-material',
 
   require 'kickstart/plugins/todo-comments',
 
