@@ -9,6 +9,26 @@ vim.opt.number = true
 --  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
 
+-- Use relative line numbers in normal mode and absolute line numbers in insert mode.
+--  Create an autocommand group
+local numbertoggle_group = vim.api.nvim_create_augroup('numbertoggle', { clear = true })
+
+-- Toggle to absolute numbers when entering Insert mode
+vim.api.nvim_create_autocmd('InsertEnter', {
+  group = numbertoggle_group,
+  callback = function()
+    vim.opt.relativenumber = false
+  end,
+})
+
+-- Toggle back to relative numbers when leaving Insert mode
+vim.api.nvim_create_autocmd('InsertLeave', {
+  group = numbertoggle_group,
+  callback = function()
+    vim.opt.relativenumber = true
+  end,
+})
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
