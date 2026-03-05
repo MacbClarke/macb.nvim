@@ -96,7 +96,6 @@ return {
             workingDirectories = { mode = 'auto' },
           },
         },
-        stylua = {},
         lua_ls = {
           on_init = function(client)
             if client.workspace_folders then
@@ -134,6 +133,7 @@ return {
 
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
+        'stylua',
         'prettierd',
       })
 
