@@ -4,4 +4,9 @@ test.sh
 nvim
 
 spell/
+
+# It is usually recommended to track lazy-lock.json in your own config repo.
+# Uncomment the next line if you prefer to keep it ignored.
 # lazy-lock.json
+
+.DS_Store
